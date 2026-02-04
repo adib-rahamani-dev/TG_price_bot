@@ -1,0 +1,16 @@
+🏠 صفحه اصلی (داشبورد):
+   http://localhost:8080
+
+⚙️ صفحه کانفیگ:
+   http://localhost:8080/config_page.html
+
+📊 داشبورد:
+   http://localhost:8080/dashboard.html
+
+🔧 API endpoints:
+   - داده داشبورد: http://localhost:8080/dashboard-data
+   - لاگ‌ها: http://localhost:8080/logs?lines=50
+   - ذخیره کانفیگ: http://localhost:8080/save (POST)
+   - دریافت کانفیگ‌ها: http://localhost:8080/list
+   - کانال stats: http://localhost:8080/channel-stats
+   - تنظیمات: http://localhost:8080/settings

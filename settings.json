@@ -1,0 +1,14 @@
+{
+  "admins": [
+    "Rman_Rajae",
+    "your_second_admin"
+  ],
+  "auto_update_interval": 1800,
+  "channel_check_enabled": true,
+  "features": {
+    "admin_panel_enabled": true,
+    "config_enabled": false,
+    "feedback_enabled": true,
+    "price_updates_enabled": true
+  }
+}

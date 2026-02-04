@@ -1,0 +1,540 @@
+2026-02-04 03:51:00,587 - INFO - 🔄 درحال دریافت داده‌ها از API...
+2026-02-04 03:51:00,785 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.18.0.1:8080
+2026-02-04 03:51:00,785 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-04 03:51:02,223 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getMe "HTTP/1.1 200 OK"
+2026-02-04 03:51:02,356 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/deleteWebhook "HTTP/1.1 200 OK"
+2026-02-04 03:51:02,358 - INFO - Application started
+2026-02-04 03:51:02,783 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:51:02,965 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 03:51:03,023 - ERROR - ⚠️ خطا در دریافت داده‌ها: HTTPSConnectionPool(host='brsapi.ir', port=443): Max retries exceeded with url: /Api/Market/Gold_Currency.php?key=BXKcHwEDHznGNfYx4gLksS6wiLGqZwXe (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+2026-02-04 03:51:03,025 - INFO - 🔄 درحال استفاده از داده قبلی...
+2026-02-04 03:51:03,027 - WARNING - ⚠️ خطا در خواندن prices_history.json: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+2026-02-04 03:51:03,029 - INFO - ✅ استفاده از داده کش (prices_cache.json)
+2026-02-04 03:51:03,029 - INFO - ✅ داده‌ها ذخیره شد: 3 نماد (منبع: کش)
+2026-02-04 03:51:03,397 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 03:51:03,620 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 03:51:03,800 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 03:51:05,308 - INFO - 127.0.0.1 - - [04/Feb/2026 03:51:05] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:51:05,975 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:51:06,127 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-04 03:51:06,282 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/editMessageText "HTTP/1.1 200 OK"
+2026-02-04 03:51:08,622 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:51:08,922 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-04 03:51:09,078 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/deleteMessage "HTTP/1.1 200 OK"
+2026-02-04 03:51:09,294 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 03:51:09,501 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 03:51:18,749 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:51:28,956 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:51:35,312 - INFO - 127.0.0.1 - - [04/Feb/2026 03:51:35] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:51:39,096 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:51:49,232 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:51:59,367 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:52:05,309 - INFO - 127.0.0.1 - - [04/Feb/2026 03:52:05] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:52:09,555 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:52:19,687 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:52:35,316 - INFO - 127.0.0.1 - - [04/Feb/2026 03:52:35] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:52:43,143 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:52:53,274 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:53:03,449 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:53:13,609 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:53:23,745 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:53:26,305 - INFO - 127.0.0.1 - - [04/Feb/2026 03:53:26] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:53:33,880 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:53:44,022 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:53:54,146 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:54:04,276 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:54:14,449 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:54:24,579 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:54:26,314 - INFO - 127.0.0.1 - - [04/Feb/2026 03:54:26] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:54:34,714 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:54:44,862 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:54:49,290 - INFO - 127.0.0.1 - - [04/Feb/2026 03:54:49] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:54:52,502 - INFO - 127.0.0.1 - - [04/Feb/2026 03:54:52] "GET /dashboard HTTP/1.1" 200 -
+2026-02-04 03:54:52,529 - INFO - 127.0.0.1 - - [04/Feb/2026 03:54:52] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:54:56,675 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:55:01,978 - INFO - 127.0.0.1 - - [04/Feb/2026 03:55:01] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:55:02,779 - INFO - 127.0.0.1 - - [04/Feb/2026 03:55:02] "[33mPOST /settings HTTP/1.1[0m" 404 -
+2026-02-04 03:55:08,414 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:55:22,528 - INFO - 127.0.0.1 - - [04/Feb/2026 03:55:22] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:55:32,771 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 03:55:52,534 - INFO - 127.0.0.1 - - [04/Feb/2026 03:55:52] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:56:23,315 - INFO - 127.0.0.1 - - [04/Feb/2026 03:56:23] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:56:52,645 - INFO - 127.0.0.1 - - [04/Feb/2026 03:56:52] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:56:54,479 - INFO - 127.0.0.1 - - [04/Feb/2026 03:56:54] "GET /dashboard HTTP/1.1" 200 -
+2026-02-04 03:56:54,496 - INFO - 127.0.0.1 - - [04/Feb/2026 03:56:54] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:56:59,793 - INFO - 127.0.0.1 - - [04/Feb/2026 03:56:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-02-04 03:57:24,506 - INFO - 127.0.0.1 - - [04/Feb/2026 03:57:24] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:57:55,307 - INFO - 127.0.0.1 - - [04/Feb/2026 03:57:55] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:58:17,149 - INFO - 127.0.0.1 - - [04/Feb/2026 03:58:17] "GET /dashboard HTTP/1.1" 200 -
+2026-02-04 03:58:17,186 - INFO - 127.0.0.1 - - [04/Feb/2026 03:58:17] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:58:44,013 - INFO - 127.0.0.1 - - [04/Feb/2026 03:58:44] "GET /dashboard HTTP/1.1" 200 -
+2026-02-04 03:58:44,076 - INFO - 127.0.0.1 - - [04/Feb/2026 03:58:44] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:58:58,544 - INFO - 127.0.0.1 - - [04/Feb/2026 03:58:58] "GET /dashboard HTTP/1.1" 200 -
+2026-02-04 03:58:58,807 - INFO - 127.0.0.1 - - [04/Feb/2026 03:58:58] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:58:59,212 - INFO - 127.0.0.1 - - [04/Feb/2026 03:58:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-04 03:59:29,315 - INFO - 127.0.0.1 - - [04/Feb/2026 03:59:29] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 03:59:59,313 - INFO - 127.0.0.1 - - [04/Feb/2026 03:59:59] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 04:00:01,590 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:01] "[36mGET /dashboard HTTP/1.1[0m" 304 -
+2026-02-04 04:00:01,609 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:01] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 04:00:02,981 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:02] "[36mGET /dashboard HTTP/1.1[0m" 304 -
+2026-02-04 04:00:03,000 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:03] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 04:00:04,534 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:04] "GET /dashboard HTTP/1.1" 200 -
+2026-02-04 04:00:04,811 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:04] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 04:00:04,857 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:04] "GET /dashboard HTTP/1.1" 200 -
+2026-02-04 04:00:05,124 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:05] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 04:00:05,239 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:05] "GET /dashboard HTTP/1.1" 200 -
+2026-02-04 04:00:05,484 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:05] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 04:00:05,717 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-02-04 04:00:10,839 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:10] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 04:00:25,278 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:25] "[36mGET /dashboard HTTP/1.1[0m" 304 -
+2026-02-04 04:00:25,305 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:25] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 04:00:25,833 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:25] "[36mGET /dashboard HTTP/1.1[0m" 304 -
+2026-02-04 04:00:25,875 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:25] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 04:00:26,058 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:26] "[36mGET /dashboard HTTP/1.1[0m" 304 -
+2026-02-04 04:00:26,077 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:26] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 04:00:26,272 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:26] "[36mGET /dashboard HTTP/1.1[0m" 304 -
+2026-02-04 04:00:26,309 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:26] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 04:00:27,382 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-02-04 04:00:56,306 - INFO - 127.0.0.1 - - [04/Feb/2026 04:00:56] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 04:01:26,313 - INFO - 127.0.0.1 - - [04/Feb/2026 04:01:26] "[35m[1mGET /dashboard-data HTTP/1.1[0m" 500 -
+2026-02-04 04:02:30,395 - INFO - 🔄 درحال دریافت داده‌ها از API...
+2026-02-04 04:02:30,501 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.18.0.1:8080
+2026-02-04 04:02:30,501 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-04 04:02:31,848 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getMe "HTTP/1.1 200 OK"
+2026-02-04 04:02:32,011 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/deleteWebhook "HTTP/1.1 200 OK"
+2026-02-04 04:02:32,012 - INFO - Application started
+2026-02-04 04:02:32,320 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:02:32,478 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:02:32,630 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:02:32,788 - ERROR - ⚠️ خطا در دریافت داده‌ها: HTTPSConnectionPool(host='brsapi.ir', port=443): Max retries exceeded with url: /Api/Market/Gold_Currency.php?key=BXKcHwEDHznGNfYx4gLksS6wiLGqZwXe (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+2026-02-04 04:02:32,789 - INFO - 🔄 درحال استفاده از داده قبلی...
+2026-02-04 04:02:32,789 - WARNING - ⚠️ خطا در خواندن prices_history.json: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+2026-02-04 04:02:32,790 - INFO - ✅ استفاده از داده کش (prices_cache.json)
+2026-02-04 04:02:32,790 - INFO - ✅ داده‌ها ذخیره شد: 3 نماد (منبع: کش)
+2026-02-04 04:05:46,129 - INFO - 🔄 درحال دریافت داده‌ها از API...
+2026-02-04 04:05:46,409 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.18.0.1:8080
+2026-02-04 04:05:46,410 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-04 04:05:49,319 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getMe "HTTP/1.1 200 OK"
+2026-02-04 04:05:49,458 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/deleteWebhook "HTTP/1.1 200 OK"
+2026-02-04 04:05:49,459 - INFO - Application started
+2026-02-04 04:05:51,314 - ERROR - ⚠️ خطا در دریافت داده‌ها: HTTPSConnectionPool(host='brsapi.ir', port=443): Max retries exceeded with url: /Api/Market/Gold_Currency.php?key=BXKcHwEDHznGNfYx4gLksS6wiLGqZwXe (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+2026-02-04 04:05:51,314 - INFO - 🔄 درحال استفاده از داده قبلی...
+2026-02-04 04:05:51,315 - WARNING - ⚠️ خطا در خواندن prices_history.json: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+2026-02-04 04:05:51,316 - INFO - ✅ استفاده از داده کش (prices_cache.json)
+2026-02-04 04:05:51,316 - INFO - ✅ داده‌ها ذخیره شد: 3 نماد (منبع: کش)
+2026-02-04 04:05:59,772 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:06:09,913 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:06:20,051 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:06:30,194 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:06:34,247 - INFO - 127.0.0.1 - - [04/Feb/2026 04:06:34] "[33mGET /dashboard HTTP/1.1[0m" 404 -
+2026-02-04 04:06:35,076 - INFO - 127.0.0.1 - - [04/Feb/2026 04:06:35] "GET / HTTP/1.1" 200 -
+2026-02-04 04:06:35,320 - INFO - 127.0.0.1 - - [04/Feb/2026 04:06:35] "GET /list HTTP/1.1" 200 -
+2026-02-04 04:06:35,798 - INFO - 127.0.0.1 - - [04/Feb/2026 04:06:35] "[33mGET /dashboard HTTP/1.1[0m" 404 -
+2026-02-04 04:06:36,618 - INFO - 127.0.0.1 - - [04/Feb/2026 04:06:36] "[33mGET /dashboard HTTP/1.1[0m" 404 -
+2026-02-04 04:06:37,000 - INFO - 127.0.0.1 - - [04/Feb/2026 04:06:37] "[33mGET /dashboard HTTP/1.1[0m" 404 -
+2026-02-04 04:06:37,322 - INFO - 127.0.0.1 - - [04/Feb/2026 04:06:37] "[33mGET /dashboard HTTP/1.1[0m" 404 -
+2026-02-04 04:06:43,686 - INFO - 127.0.0.1 - - [04/Feb/2026 04:06:43] "[33mGET /dashboard.html HTTP/1.1[0m" 404 -
+2026-02-04 04:06:54,128 - INFO - Application is stopping. This might take a moment.
+2026-02-04 04:06:54,128 - INFO - Application.stop() complete
+2026-02-04 04:07:25,144 - INFO - 🔄 درحال دریافت داده‌ها از API...
+2026-02-04 04:07:25,601 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.18.0.1:8080
+2026-02-04 04:07:25,602 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-04 04:07:31,222 - ERROR - ⚠️ خطا در دریافت داده‌ها: HTTPSConnectionPool(host='brsapi.ir', port=443): Max retries exceeded with url: /Api/Market/Gold_Currency.php?key=BXKcHwEDHznGNfYx4gLksS6wiLGqZwXe (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+2026-02-04 04:07:31,224 - INFO - 🔄 درحال استفاده از داده قبلی...
+2026-02-04 04:07:31,226 - ERROR - ❌ هیچ داده‌ای موجود نیست!
+2026-02-04 04:07:31,228 - WARNING - ⚠️ داده جدیدی دریافت نشد، از کش استفاده می‌شود
+2026-02-04 04:08:34,582 - INFO - 🔄 درحال دریافت داده‌ها از API...
+2026-02-04 04:23:09,143 - INFO - 🔄 درحال دریافت داده‌ها از API...
+2026-02-04 04:23:09,221 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.18.0.1:8080
+2026-02-04 04:23:09,221 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-04 04:23:09,777 - ERROR - ⚠️ خطا در دریافت داده‌ها: HTTPSConnectionPool(host='brsapi.ir', port=443): Max retries exceeded with url: /Api/Market/Gold_Currency.php?key=BXKcHwEDHznGNfYx4gLksS6wiLGqZwXe (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response')))
+2026-02-04 04:23:09,778 - INFO - 🔄 درحال استفاده از داده قبلی...
+2026-02-04 04:23:09,778 - INFO - ✅ استفاده از آخرین داده ذخیره شده (prices_history.json)
+2026-02-04 04:23:09,779 - INFO - ✅ داده‌ها ذخیره شد: 3 نماد (منبع: کش)
+2026-02-04 04:23:10,741 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getMe "HTTP/1.1 200 OK"
+2026-02-04 04:23:10,895 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/deleteWebhook "HTTP/1.1 200 OK"
+2026-02-04 04:23:10,895 - INFO - Application started
+2026-02-04 04:23:11,284 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:23:11,291 - INFO - ✅ کاربر جدید ثبت شد: Liora_AA (8370249466)
+2026-02-04 04:23:11,472 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:23:11,495 - INFO - ✅ کاربر جدید ثبت شد: None (6133968471)
+2026-02-04 04:23:11,642 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:23:11,829 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:23:21,433 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:23:24,354 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:23:24,358 - INFO - 127.0.0.1 - - [04/Feb/2026 04:23:24] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:23:24,379 - INFO - 127.0.0.1 - - [04/Feb/2026 04:23:24] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:23:24,380 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:23:24,464 - INFO - 127.0.0.1 - - [04/Feb/2026 04:23:24] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:23:24,476 - INFO - 127.0.0.1 - - [04/Feb/2026 04:23:24] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:23:24,870 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-04 04:23:25,024 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/editMessageText "HTTP/1.1 200 OK"
+2026-02-04 04:23:26,584 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:23:26,733 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-04 04:23:26,897 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/editMessageText "HTTP/1.1 200 OK"
+2026-02-04 04:23:27,075 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:23:33,073 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:23:33,318 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:23:33,320 - INFO - 127.0.0.1 - - [04/Feb/2026 04:23:33] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:23:33,342 - INFO - 127.0.0.1 - - [04/Feb/2026 04:23:33] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:23:33,435 - INFO - 127.0.0.1 - - [04/Feb/2026 04:23:33] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:23:33,451 - INFO - 127.0.0.1 - - [04/Feb/2026 04:23:33] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:23:33,628 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-04 04:23:33,790 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/editMessageText "HTTP/1.1 200 OK"
+2026-02-04 04:23:37,073 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:23:37,212 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-04 04:23:37,389 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/editMessageText "HTTP/1.1 200 OK"
+2026-02-04 04:23:37,622 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:23:47,223 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:23:54,374 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:23:54,381 - INFO - 127.0.0.1 - - [04/Feb/2026 04:23:54] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:23:54,433 - INFO - 127.0.0.1 - - [04/Feb/2026 04:23:54] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:23:54,474 - INFO - 127.0.0.1 - - [04/Feb/2026 04:23:54] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:23:54,479 - INFO - 127.0.0.1 - - [04/Feb/2026 04:23:54] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:23:57,357 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:24:03,255 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:24:03,257 - INFO - 127.0.0.1 - - [04/Feb/2026 04:24:03] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:24:03,267 - INFO - 127.0.0.1 - - [04/Feb/2026 04:24:03] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:24:03,357 - INFO - 127.0.0.1 - - [04/Feb/2026 04:24:03] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:24:03,368 - INFO - 127.0.0.1 - - [04/Feb/2026 04:24:03] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:24:07,543 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:24:15,875 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:24:16,364 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:24:17,559 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:24:17,703 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-04 04:24:17,835 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getChatMember "HTTP/1.1 200 OK"
+2026-02-04 04:24:17,998 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/deleteMessage "HTTP/1.1 200 OK"
+2026-02-04 04:24:18,206 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:24:18,451 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:24:18,687 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:24:20,732 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:24:20,886 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-04 04:24:21,027 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getChatMember "HTTP/1.1 200 OK"
+2026-02-04 04:24:21,190 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/deleteMessage "HTTP/1.1 200 OK"
+2026-02-04 04:24:21,354 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:24:21,525 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:24:21,704 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:24:24,354 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:24:24,357 - INFO - 127.0.0.1 - - [04/Feb/2026 04:24:24] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:24:24,381 - INFO - 127.0.0.1 - - [04/Feb/2026 04:24:24] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:24:24,449 - INFO - 127.0.0.1 - - [04/Feb/2026 04:24:24] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:24:24,455 - INFO - 127.0.0.1 - - [04/Feb/2026 04:24:24] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:24:30,868 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:24:33,306 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:24:33,307 - INFO - 127.0.0.1 - - [04/Feb/2026 04:24:33] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:24:33,313 - INFO - 127.0.0.1 - - [04/Feb/2026 04:24:33] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:24:33,366 - INFO - 127.0.0.1 - - [04/Feb/2026 04:24:33] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:24:33,371 - INFO - 127.0.0.1 - - [04/Feb/2026 04:24:33] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:24:41,000 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:24:51,147 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:24:54,348 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:24:54,350 - INFO - 127.0.0.1 - - [04/Feb/2026 04:24:54] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:24:54,361 - INFO - 127.0.0.1 - - [04/Feb/2026 04:24:54] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:24:54,429 - INFO - 127.0.0.1 - - [04/Feb/2026 04:24:54] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:24:54,434 - INFO - 127.0.0.1 - - [04/Feb/2026 04:24:54] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:25:01,288 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:25:03,312 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:25:03,313 - INFO - 127.0.0.1 - - [04/Feb/2026 04:25:03] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:25:03,330 - INFO - 127.0.0.1 - - [04/Feb/2026 04:25:03] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:25:03,411 - INFO - 127.0.0.1 - - [04/Feb/2026 04:25:03] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:25:03,427 - INFO - 127.0.0.1 - - [04/Feb/2026 04:25:03] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:25:11,435 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:25:21,566 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:25:24,348 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:25:24,349 - INFO - 127.0.0.1 - - [04/Feb/2026 04:25:24] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:25:24,362 - INFO - 127.0.0.1 - - [04/Feb/2026 04:25:24] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:25:24,461 - INFO - 127.0.0.1 - - [04/Feb/2026 04:25:24] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:25:24,467 - INFO - 127.0.0.1 - - [04/Feb/2026 04:25:24] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:25:33,256 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:25:33,257 - INFO - 127.0.0.1 - - [04/Feb/2026 04:25:33] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:25:33,270 - INFO - 127.0.0.1 - - [04/Feb/2026 04:25:33] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:25:33,349 - INFO - 127.0.0.1 - - [04/Feb/2026 04:25:33] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:25:33,354 - INFO - 127.0.0.1 - - [04/Feb/2026 04:25:33] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:25:44,003 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:25:54,134 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:25:54,345 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:25:54,346 - INFO - 127.0.0.1 - - [04/Feb/2026 04:25:54] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:25:54,353 - INFO - 127.0.0.1 - - [04/Feb/2026 04:25:54] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:25:54,399 - INFO - 127.0.0.1 - - [04/Feb/2026 04:25:54] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:25:54,424 - INFO - 127.0.0.1 - - [04/Feb/2026 04:25:54] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:26:03,307 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:26:03,308 - INFO - 127.0.0.1 - - [04/Feb/2026 04:26:03] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:26:03,325 - INFO - 127.0.0.1 - - [04/Feb/2026 04:26:03] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:26:03,391 - INFO - 127.0.0.1 - - [04/Feb/2026 04:26:03] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:26:03,399 - INFO - 127.0.0.1 - - [04/Feb/2026 04:26:03] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:26:24,348 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:26:24,349 - INFO - 127.0.0.1 - - [04/Feb/2026 04:26:24] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:26:24,361 - INFO - 127.0.0.1 - - [04/Feb/2026 04:26:24] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:26:24,450 - INFO - 127.0.0.1 - - [04/Feb/2026 04:26:24] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:26:24,462 - INFO - 127.0.0.1 - - [04/Feb/2026 04:26:24] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:26:33,364 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:26:33,365 - INFO - 127.0.0.1 - - [04/Feb/2026 04:26:33] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:26:33,374 - INFO - 127.0.0.1 - - [04/Feb/2026 04:26:33] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:26:33,429 - INFO - 127.0.0.1 - - [04/Feb/2026 04:26:33] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:26:33,438 - INFO - 127.0.0.1 - - [04/Feb/2026 04:26:33] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:26:54,354 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:26:54,356 - INFO - 127.0.0.1 - - [04/Feb/2026 04:26:54] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:26:54,375 - INFO - 127.0.0.1 - - [04/Feb/2026 04:26:54] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:26:54,450 - INFO - 127.0.0.1 - - [04/Feb/2026 04:26:54] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:26:54,459 - INFO - 127.0.0.1 - - [04/Feb/2026 04:26:54] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:27:00,778 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:27:01,123 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-04 04:27:01,124 - INFO - 🔄 درحال دریافت داده‌ها از API...
+2026-02-04 04:27:03,308 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:27:03,308 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:03] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:27:03,313 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:03] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:27:03,376 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:03] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:27:03,389 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:03] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:27:03,477 - ERROR - ⚠️ خطا در دریافت داده‌ها: HTTPSConnectionPool(host='brsapi.ir', port=443): Max retries exceeded with url: /Api/Market/Gold_Currency.php?key=BXKcHwEDHznGNfYx4gLksS6wiLGqZwXe (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+2026-02-04 04:27:03,478 - INFO - 🔄 درحال استفاده از داده قبلی...
+2026-02-04 04:27:03,478 - INFO - ✅ استفاده از آخرین داده ذخیره شده (prices_history.json)
+2026-02-04 04:27:08,481 - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\tls.py", line 180, in _call_sslobject_method
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\ssl.py", line 858, in read
+    v = self._sslobj.read(len)
+        ^^^^^^^^^^^^^^^^^^^^^^
+ssl.SSLWantReadError: The operation did not complete (read) (_ssl.c:2570)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_core\_tasks.py", line 124, in fail_after
+    yield cancel_scope
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 34, in read
+    return await self._stream.receive(max_bytes=max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\tls.py", line 244, in receive
+    data = await self._call_sslobject_method(self._ssl_object.read, max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\streams\tls.py", line 187, in _call_sslobject_method
+    data = await self.transport_stream.receive()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_backends\_asyncio.py", line 1269, in receive
+    await self._protocol.read_event.wait()
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\asyncio\locks.py", line 212, in wait
+    await fut
+asyncio.exceptions.CancelledError: Cancelled via cancel scope 1828beb8da0; reason: deadline exceeded
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_exceptions.py", line 10, in map_exceptions
+    yield
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with anyio.fail_after(timeout):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\anyio\_core\_tasks.py", line 127, in fail_after
+    raise TimeoutError
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 60, in map_httpcore_exceptions
+    yield
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 353, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 262, in handle_async_request
+    raise exc
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 245, in handle_async_request
+    response = await connection.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\http_proxy.py", line 326, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\http11.py", line 121, in handle_async_request
+    raise exc
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\http11.py", line 99, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\http11.py", line 164, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\http11.py", line 200, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 31, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_httpxrequest.py", line 216, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1530, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1682, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1719, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 352, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 77, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1124, in process_update
+    await coroutine
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_handler.py", line 141, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\EXO\Desktop\TG_bot\price_test.py", line 495, in button
+    await query.edit_message_text(text=msg, parse_mode=ParseMode.HTML)
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_callbackquery.py", line 241, in edit_message_text
+    return await self.message.edit_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_message.py", line 2526, in edit_text
+    return await self.get_bot().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 1482, in edit_message_text
+    return await super().edit_message_text(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 381, in decorator
+    result = await func(self, *args, **kwargs)  # skipcq: PYL-E1102
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 3381, in edit_message_text
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 507, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 559, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 469, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 325, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 497, in _do_post
+    return await request.post(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 168, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 291, in _request_wrapper
+    raise exc
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 277, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\EXO\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_httpxrequest.py", line 233, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
+2026-02-04 04:27:11,035 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:27:13,851 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:13] "POST /settings HTTP/1.1" 200 -
+2026-02-04 04:27:16,000 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:27:16,001 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:16] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:27:16,007 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:16] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:27:16,036 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:16] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:27:16,051 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:16] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:27:21,355 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:27:21,727 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:27:22,965 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:27:23,131 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-04 04:27:23,263 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getChatMember "HTTP/1.1 200 OK"
+2026-02-04 04:27:23,410 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/deleteMessage "HTTP/1.1 200 OK"
+2026-02-04 04:27:23,627 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:27:23,791 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:27:23,954 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:27:24,355 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:27:24,357 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:24] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:27:24,377 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:24] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:27:24,450 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:24] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:27:24,454 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:24] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:27:25,536 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:27:25,691 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-04 04:27:25,867 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/editMessageText "HTTP/1.1 200 OK"
+2026-02-04 04:27:28,617 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:27:28,781 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/answerCallbackQuery "HTTP/1.1 200 OK"
+2026-02-04 04:27:28,964 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/editMessageText "HTTP/1.1 200 OK"
+2026-02-04 04:27:29,165 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/sendMessage "HTTP/1.1 200 OK"
+2026-02-04 04:27:33,255 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:27:33,256 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:33] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:27:33,275 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:33] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:27:33,338 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:33] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:27:33,343 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:33] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:27:38,826 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:27:48,964 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:27:54,342 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:27:54,343 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:54] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:27:54,355 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:54] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:27:54,405 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:54] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:27:54,410 - INFO - 127.0.0.1 - - [04/Feb/2026 04:27:54] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:27:59,085 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:28:00,781 - INFO - 127.0.0.1 - - [04/Feb/2026 04:28:00] "GET / HTTP/1.1" 200 -
+2026-02-04 04:28:00,851 - INFO - 127.0.0.1 - - [04/Feb/2026 04:28:00] "GET /list HTTP/1.1" 200 -
+2026-02-04 04:28:09,236 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:28:16,399 - INFO - 127.0.0.1 - - [04/Feb/2026 04:28:16] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-04 04:28:16,420 - INFO - 127.0.0.1 - - [04/Feb/2026 04:28:16] "GET /list HTTP/1.1" 200 -
+2026-02-04 04:28:19,373 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:28:24,348 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:28:24,349 - INFO - 127.0.0.1 - - [04/Feb/2026 04:28:24] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:28:24,359 - INFO - 127.0.0.1 - - [04/Feb/2026 04:28:24] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:28:24,418 - INFO - 127.0.0.1 - - [04/Feb/2026 04:28:24] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:28:24,423 - INFO - 127.0.0.1 - - [04/Feb/2026 04:28:24] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:28:29,504 - INFO - HTTP Request: POST https://api.telegram.org/bot8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8/getUpdates "HTTP/1.1 200 OK"
+2026-02-04 04:28:39,302 - INFO - 127.0.0.1 - - [04/Feb/2026 04:28:39] "[33mGET /dashboard.html HTTP/1.1[0m" 404 -
+2026-02-04 04:28:42,088 - INFO - 127.0.0.1 - - [04/Feb/2026 04:28:42] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-04 04:28:42,148 - INFO - 127.0.0.1 - - [04/Feb/2026 04:28:42] "GET /list HTTP/1.1" 200 -
+2026-02-04 04:28:52,587 - INFO - 127.0.0.1 - - [04/Feb/2026 04:28:52] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:28:54,354 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:28:54,356 - INFO - 127.0.0.1 - - [04/Feb/2026 04:28:54] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:28:54,377 - INFO - 127.0.0.1 - - [04/Feb/2026 04:28:54] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:28:54,470 - INFO - 127.0.0.1 - - [04/Feb/2026 04:28:54] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:28:54,474 - INFO - 127.0.0.1 - - [04/Feb/2026 04:28:54] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:29:00,379 - INFO - 127.0.0.1 - - [04/Feb/2026 04:29:00] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:29:14,690 - INFO - 127.0.0.1 - - [04/Feb/2026 04:29:14] "[33mGET /dashboard HTTP/1.1[0m" 404 -
+2026-02-04 04:29:24,342 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:29:24,342 - INFO - 127.0.0.1 - - [04/Feb/2026 04:29:24] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:29:24,346 - INFO - 127.0.0.1 - - [04/Feb/2026 04:29:24] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:29:24,430 - INFO - 127.0.0.1 - - [04/Feb/2026 04:29:24] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:29:24,437 - INFO - 127.0.0.1 - - [04/Feb/2026 04:29:24] "GET /settings HTTP/1.1" 200 -
+2026-02-04 04:29:54,343 - INFO - Dashboard: 23 users, 1 configs, 7 feedbacks
+2026-02-04 04:29:54,344 - INFO - 127.0.0.1 - - [04/Feb/2026 04:29:54] "GET /dashboard-data HTTP/1.1" 200 -
+2026-02-04 04:29:54,349 - INFO - 127.0.0.1 - - [04/Feb/2026 04:29:54] "GET /channel-stats HTTP/1.1" 200 -
+2026-02-04 04:29:54,380 - INFO - 127.0.0.1 - - [04/Feb/2026 04:29:54] "GET /logs?lines=50 HTTP/1.1" 200 -
+2026-02-04 04:29:54,385 - INFO - 127.0.0.1 - - [04/Feb/2026 04:29:54] "GET /settings HTTP/1.1" 200 -

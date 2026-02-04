@@ -1,0 +1,14 @@
+[
+  {
+    "user_id": 123456,
+    "username": "user1",
+    "first_name": "اسم",
+    "join_date": "2026-02-04"
+  },
+  {
+    "user_id": 234567,
+    "username": "user2",
+    "first_name": "نام",
+    "join_date": "2026-02-04"
+  }
+]

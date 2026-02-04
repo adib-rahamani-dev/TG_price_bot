@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>صفحه کانفیگ وی‌تو‌ری</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body { background:#f7f9fc; }
+      .card { margin-top:30px }
+      textarea { font-family: monospace; height: 220px }
+      .cfg-item { white-space: pre-wrap; font-family: monospace; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h4 class="card-title">ثبت کانفیگ وی‌تو‌ری</h4>
+          <p class="text-muted">کانفیگ خود را در textarea قرار دهید و ذخیره کنید. سپس از طریق ربات می‌توانید آنها را دریافت کنید.</p>
+
+          <div class="mb-3">
+            <label class="form-label">نام (اختیاری)</label>
+            <input id="name" class="form-control" placeholder="یک اسم برای این کانفیگ وارد کنید">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">کانفیگ</label>
+            <textarea id="config" class="form-control" placeholder="کانفیگ را اینجا قرار دهید"></textarea>
+          </div>
+
+          <div class="d-flex gap-2">
+            <button id="saveBtn" class="btn btn-primary">ذخیره</button>
+            <button id="clearBtn" class="btn btn-outline-secondary">پاک کردن</button>
+            <button id="getConfigsBtn" class="btn btn-success">📥 دریافت کانفیگ‌ها</button>
+            <a class="btn btn-info" href="/random?n=10" target="_blank">🎲 نمایش 10 رندوم</a>
+          </div>
+
+          <div id="msg" class="mt-3"></div>
+        </div>
+      </div>
+
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5>آخرین کانفیگ‌ها</h5>
+          <div id="list" class="mt-2"></div>
+        </div>
+      </div>
+
+      <!-- Modal برای نمایش کانفیگ‌های دریافتی -->
+      <div class="modal fade" id="configsModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">کانفیگ‌های دریافتی</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <div id="configsList"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="text-center text-muted mt-4">آدرس سرور: <code>http://YOUR_SERVER_IP:8080/</code></footer>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      async function loadList(){
+        try{
+          const res = await fetch('/list');
+          const arr = await res.json();
+          const list = document.getElementById('list');
+          if(!arr || !arr.length){ list.innerHTML = '<div class="text-muted">هیچ کانفیگی ثبت نشده</div>'; return }
+          list.innerHTML = '';
+          arr.slice(-20).reverse().forEach((it, i)=>{
+            const el = document.createElement('div'); el.className='mb-2';
+            el.innerHTML = `<div class=\"card p-2\"><div class=\"d-flex justify-content-between\"><strong>${it.name||'بدون نام'}</strong><small class=\"text-muted\">${it.time}</small></div><pre class=\"cfg-item mt-2\">${escapeHtml(it.config)}</pre></div>`
+            list.appendChild(el);
+          })
+        }catch(e){ console.error('خطا در بارگذاری لیست:', e) }
+      }
+      function escapeHtml(s){ return s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;') }
+
+      document.getElementById('saveBtn').addEventListener('click', async ()=>{
+        const config = document.getElementById('config').value.trim();
+        const name = document.getElementById('name').value.trim();
+        const msg = document.getElementById('msg');
+        if(!config){ msg.innerHTML='<div class="text-danger">لطفاً کانفیگ را وارد کنید.</div>'; return }
+        msg.innerHTML = '<div class="text-muted">درحال ذخیره...</div>';
+        const form = new FormData();
+        form.append('config', config);
+        form.append('name', name);
+        try{
+          console.log('ارسال کانفیگ به /save...');
+          const res = await fetch('/save', { method:'POST', body: form });
+          console.log('وضعیت پاسخ:', res.status);
+          const j = await res.json();
+          console.log('پاسخ جیسون:', j);
+          if(j.ok){ msg.innerHTML = '<div class="text-success">✅ ذخیره شد.</div>'; document.getElementById('config').value=''; document.getElementById('name').value=''; loadList() }
+          else msg.innerHTML = '<div class="text-danger">❌ خطا در ذخیره: ' + (j.error||'نامشخص') + '</div>';
+        }catch(e){ 
+          console.error('خطا در اتصال:', e);
+          msg.innerHTML = '<div class="text-danger">❌ خطا در اتصال: ' + e.message + '</div>' 
+        }
+      })
+      document.getElementById('clearBtn').addEventListener('click', ()=>{ document.getElementById('config').value=''; document.getElementById('name').value=''; })
+      
+      // دکمه دریافت کانفیگ‌ها
+      document.getElementById('getConfigsBtn').addEventListener('click', async ()=>{
+        try{
+          const res = await fetch('/list');
+          const cfgs = await res.json();
+          if(!cfgs || !cfgs.length){ alert('هیچ کانفیگی وجود ندارد'); return }
+          
+          let html = '';
+          cfgs.slice(-50).reverse().forEach((cfg, i)=>{
+            html += `<div class="card mb-2 p-3">
+              <div class="d-flex justify-content-between mb-2">
+                <strong>${cfg.name||'بدون نام'}</strong>
+                <small class="text-muted">${cfg.time}</small>
+              </div>
+              <pre style="background:#f5f5f5;padding:10px;border-radius:5px;overflow-x:auto">${escapeHtml(cfg.config)}</pre>
+              <button class="btn btn-sm btn-outline-primary" onclick="copyToClipboard(this)">📋 کپی</button>
+            </div>`;
+          });
+          
+          document.getElementById('configsList').innerHTML = html;
+          new bootstrap.Modal(document.getElementById('configsModal')).show();
+        }catch(e){
+          console.error('خطا:', e);
+          alert('خطا در دریافت کانفیگ‌ها: ' + e.message);
+        }
+      })
+      
+      function copyToClipboard(btn){
+        const pre = btn.previousElementSibling;
+        const text = pre.textContent;
+        navigator.clipboard.writeText(text).then(()=>{
+          btn.textContent = '✅ کپی شد';
+          setTimeout(()=>{ btn.textContent = '📋 کپی' }, 2000);
+        }).catch(e=>alert('خطا: ' + e));
+      }
+      
+      loadList();
+    </script>
+  </body>
+</html>
