@@ -225,7 +225,7 @@ def run_config_server(host="0.0.0.0", port=8080):
 
     @app.route('/')
     def index():
-        return send_from_directory('.', 'config_page.html')
+        return send_from_directory('.', 'dashboard.html')
 
     @app.route('/save', methods=['POST'])
     def save_config():
