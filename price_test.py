@@ -30,7 +30,8 @@ logger = logging.getLogger(__name__)
 # ------------------- تنظیمات -------------------
 API_KEY = "BXKcHwEDHznGNfYx4gLksS6wiLGqZwXe"
 API_URL = f"https://BrsApi.ir/Api/Market/Gold_Currency.php?key={API_KEY}"
-FILTER_SYMBOLS = ["USD", "IR_GOLD_18K", "IR_COIN_EMAMI"]
+FILTER_SYMBOLS = ["IR_GOLD_18K", "IR_COIN_EMAMI", "USD"]
+MARKET_CACHE_FILE = "market_cache.json"
 
 TELEGRAM_TOKEN = "8339623747:AAEiJZBwKwJW9HykBN_RerqKxzTMsdPuiG8"
 DATA_FILE = "prices_history.json"
@@ -61,8 +62,8 @@ def load_json(file_path):
 # ------------------- دریافت داده -------------------
 def fetch_data():
     """Fetch data from API. Returns a tuple (prices_list, from_cache_flag).
-    If API succeeds, saves to DATA_FILE and returns (filtered, False).
-    If API fails, tries to return last entry from DATA_FILE or prices_cache.json with from_cache=True.
+    If API succeeds, saves to DATA_FILE, market_cache.json and prices_cache.json, returns (filtered, False).
+    If API fails, tries to return last entry from DATA_FILE or market_cache.json with from_cache=True.
     """
     try:
         logger.info("🔄 درحال دریافت داده‌ها از API...")
@@ -81,7 +82,8 @@ def fetch_data():
                         "price": item.get("price"),
                         "change_value": item.get("change_value"),
                         "change_percent": item.get("change_percent"),
-                        "time": now
+                        "time": now,
+                        "unit": item.get("unit", "تومان")
                     })
 
         if filtered:
@@ -103,12 +105,20 @@ def fetch_data():
             with open(DATA_FILE, "w", encoding="utf-8") as f:
                 json.dump(history, f, ensure_ascii=False, indent=2)
 
-            # also save full API response to prices cache that bot reads from
+            # Save full API response to market_cache.json
+            try:
+                with open(MARKET_CACHE_FILE, 'w', encoding='utf-8') as mf:
+                    json.dump(data, mf, ensure_ascii=False, indent=2)
+                logger.info(f"✅ بازگشت به {MARKET_CACHE_FILE}")
+            except Exception as e:
+                logger.warning(f"⚠️ خطا در نوشتن {MARKET_CACHE_FILE}: {e}")
+
+            # also save filtered prices to prices cache for backward compatibility
             try:
                 with open(PRICES_CACHE_FILE, 'w', encoding='utf-8') as cf:
-                    json.dump(data, cf, ensure_ascii=False, indent=2)
+                    json.dump(filtered, cf, ensure_ascii=False, indent=2)
             except Exception as e:
-                print(f"⚠️ خطا در نوشتن prices_cache.json: {e}")
+                logger.warning(f"⚠️ خطا در نوشتن {PRICES_CACHE_FILE}: {e}")
 
             logger.info(f"✅ داده‌ها با موفقیت ذخیره شد: {len(filtered)} نماد")
             return filtered, False
@@ -131,10 +141,10 @@ def fetch_data():
         except Exception as history_error:
             logger.warning(f"⚠️ خطا در خواندن prices_history.json: {history_error}")
 
-        # fallback to prices_cache.json
+        # fallback to market_cache.json
         try:
-            if os.path.exists("prices_cache.json"):
-                with open("prices_cache.json", "r", encoding="utf-8") as f:
+            if os.path.exists(MARKET_CACHE_FILE):
+                with open(MARKET_CACHE_FILE, "r", encoding="utf-8") as f:
                     cache_data = json.load(f)
 
                 filtered = []
@@ -147,13 +157,28 @@ def fetch_data():
                                 "price": item.get("price"),
                                 "change_value": item.get("change_value"),
                                 "change_percent": item.get("change_percent"),
-                                "time": item.get("time", f"{item.get('date')} {item.get('time')}")
+                                "time": item.get("time", f"{item.get('date')} {item.get('time')}"),
+                                "unit": item.get("unit", "تومان")
                             })
                 if filtered:
-                    logger.info("✅ استفاده از داده کش (prices_cache.json)")
+                    logger.info("✅ استفاده از داده کش (market_cache.json)")
                     return filtered, True
         except Exception as cache_error:
-            logger.warning(f"⚠️ خطا در خواندن prices_cache.json: {cache_error}")
+            logger.warning(f"⚠️ خطا در خواندن market_cache.json: {cache_error}")
+
+        # fallback to prices_cache.json for backward compatibility
+        try:
+            if os.path.exists(PRICES_CACHE_FILE):
+                with open(PRICES_CACHE_FILE, "r", encoding="utf-8") as f:
+                    cache_data = json.load(f)
+
+                if isinstance(cache_data, list):
+                    filtered = [item for item in cache_data if item.get("symbol") in FILTER_SYMBOLS]
+                    if filtered:
+                        logger.info("✅ استفاده از داده کش (prices_cache.json)")
+                        return filtered, True
+        except Exception as prices_error:
+            logger.warning(f"⚠️ خطا در خواندن prices_cache.json: {prices_error}")
 
         logger.error("❌ هیچ داده‌ای موجود نیست!")
         return [], True
@@ -319,7 +344,8 @@ def run_config_server(host="0.0.0.0", port=8080):
                                         'price': item.get('price', ''),
                                         'change_value': item.get('change_value', 0),
                                         'change_percent': item.get('change_percent', 0),
-                                        'time': item.get('time', '-')
+                                        'time': item.get('time', '-'),
+                                        'unit': item.get('unit', 'تومان')
                                     })
                         if result['prices']:
                             result['stats']['last_update'] = result['prices'][0].get('time', '-')
@@ -391,8 +417,11 @@ def build_message(prices, from_cache=False):
     cache_indicator = "📊 (کش‌شده)" if from_cache else "💰"
     msg = f"{cache_indicator} <b>آخرین قیمت‌ها</b>\n⏰ {now}\n\n"
     for item in prices:
-        arrow = "🔺" if item["change_value"] >= 0 else "🔻"
-        msg += f"<b>{item['name']}:</b> {item['price']} ({arrow} {item['change_percent']}%)\n"
+        change_val = item.get("change_value")
+        arrow = "🔺" if (change_val is not None and change_val >= 0) else "🔻"
+        unit = item.get("unit", "تومان")
+        change_pct = item.get("change_percent", 0)
+        msg += f"<b>{item['name']}:</b> {item['price']} {unit} ({arrow} {change_pct}%)\n"
     return msg
 
 
@@ -422,7 +451,6 @@ async def send_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = []
     keyboard.append([InlineKeyboardButton("💰 قیمت لحظه‌ای", callback_data="get_price")])
     keyboard.append([InlineKeyboardButton("📝 ارسال فیدبک", callback_data="feedback")])
-    keyboard.append([InlineKeyboardButton("📥 دریافت کانفیگ", callback_data="get_configs_btn")])
     try:
         uname = user.username if user and user.username else ''
         if uname and uname.lower() in [admin.lower() for admin in ADMIN_USERNAMES]:
@@ -466,8 +494,8 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
                         prices = history[-1]
                         is_from_cache = True
                         print("✅ استفاده از داده کش‌شده (prices_history.json)")
-                elif os.path.exists("prices_cache.json"):
-                    with open("prices_cache.json", "r", encoding="utf-8") as f:
+                elif os.path.exists(MARKET_CACHE_FILE):
+                    with open(MARKET_CACHE_FILE, "r", encoding="utf-8") as f:
                         cache_data = json.load(f)
                     prices = []
                     for category, items in cache_data.items():
@@ -479,11 +507,20 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
                                     "price": item.get("price"),
                                     "change_value": item.get("change_value"),
                                     "change_percent": item.get("change_percent"),
-                                    "time": item.get("time", f"{item.get('date')} {item.get('time')}")
+                                    "time": item.get("time", f"{item.get('date')} {item.get('time')}"),
+                                    "unit": item.get("unit", "تومان")
                                 })
                     if prices:
                         is_from_cache = True
-                        print("✅ استفاده از داده کش‌شده (prices_cache.json)")
+                        print("✅ استفاده از داده کش‌شده (market_cache.json)")
+                elif os.path.exists(PRICES_CACHE_FILE):
+                    with open(PRICES_CACHE_FILE, "r", encoding="utf-8") as f:
+                        cache_data = json.load(f)
+                    if isinstance(cache_data, list):
+                        prices = [item for item in cache_data if item.get("symbol") in FILTER_SYMBOLS]
+                        if prices:
+                            is_from_cache = True
+                            print("✅ استفاده از داده کش‌شده (prices_cache.json)")
             except Exception as e:
                 print(f"❌ خطا در خواندن کش: {e}")
 

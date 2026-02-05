@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 پنل مدیریت ربات</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            padding: 40px 20px;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .menu-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+            border-top: 4px solid #667eea;
+        }
+        
+        .menu-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .menu-card.primary {
+            border-top-color: #667eea;
+        }
+        
+        .menu-card.success {
+            border-top-color: #10b981;
+        }
+        
+        .menu-card.info {
+            border-top-color: #0ea5e9;
+        }
+        
+        .menu-card.warning {
+            border-top-color: #f59e0b;
+        }
+        
+        .menu-icon {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .menu-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .menu-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            padding: 30px;
+        }
+        
+        .footer small {
+            opacity: 0.8;
+        }
+
+        .status-online {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: #10b981;
+            border-radius: 50%;
+            margin-left: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>🤖 پنل مدیریت ربات</h1>
+    <p>مدیریت کامل بات و تنظیمات سیستم</p>
+    <span class="status-online" title="سرور فعال"></span>
+</div>
+
+<div class="container">
+    <div class="menu-grid">
+        <!-- داشبورد اصلی -->
+        <a href="/dashboard" class="menu-card primary">
+            <span class="menu-icon">📊</span>
+            <h3>داشبورد</h3>
+            <p>مشاهده آمار و وضعیت سیستم</p>
+        </a>
+
+        <!-- صفحه کانفیگ -->
+        <a href="/config" class="menu-card success">
+            <span class="menu-icon">📋</span>
+            <h3>مدیریت کانفیگ</h3>
+            <p>ثبت و مدیریت کانفیگ‌های V2Ray</p>
+        </a>
+
+        <!-- تنظیمات -->
+        <a href="/settings-panel" class="menu-card info">
+            <span class="menu-icon">⚙️</span>
+            <h3>تنظیمات</h3>
+            <p>فعال‌سازی/غیرفعال‌سازی ویژگی‌ها</p>
+        </a>
+
+        <!-- قیمت‌های زنده -->
+        <a href="javascript:void(0)" onclick="showPrices()" class="menu-card warning">
+            <span class="menu-icon">💰</span>
+            <h3>قیمت‌های زنده</h3>
+            <p>مشاهده آخرین قیمت‌ها</p>
+        </a>
+    </div>
+
+    <!-- اطلاعات قیمت‌ها -->
+    <div class="container" id="pricesContainer" style="display:none; margin-bottom: 30px;">
+        <div class="row">
+            <div class="col-12">
+                <div class="card" style="background: white; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
+                    <div class="card-header" style="background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%); color: white; border-radius: 12px 12px 0 0;">
+                        <h5 class="mb-0">💰 قیمت‌های فعلی</h5>
+                    </div>
+                    <div class="card-body" id="pricesBody" style="padding: 20px;">
+                        <div class="text-center">
+                            <div class="spinner-border text-warning" role="status">
+                                <span class="visually-hidden">درحال بارگذاری...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <small>🤖 پنل مدیریت ربات | تمام حقوق محفوظ است © 2026</small>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    async function showPrices() {
+        const container = document.getElementById('pricesContainer');
+        const body = document.getElementById('pricesBody');
+        
+        container.style.display = 'block';
+        body.innerHTML = '<div class="text-center"><div class="spinner-border text-warning" role="status"><span class="visually-hidden">درحال بارگذاری...</span></div></div>';
+        
+        try {
+            const res = await fetch('/dashboard-data');
+            const data = await res.json();
+            
+            if (data.prices && data.prices.length > 0) {
+                let html = '<div class="table-responsive"><table class="table table-hover"><thead><tr><th>نماد</th><th>نام</th><th>قیمت</th><th>تغییر</th><th>درصد</th><th>زمان</th></tr></thead><tbody>';
+                
+                data.prices.forEach(item => {
+                    const arrow = item.change_value >= 0 ? '🔺' : '🔻';
+                    const color = item.change_value >= 0 ? 'success' : 'danger';
+                    html += `<tr>
+                        <td><strong>${item.symbol || '-'}</strong></td>
+                        <td>${item.name || '-'}</td>
+                        <td>${item.price} ${item.unit || 'تومان'}</td>
+                        <td class="text-${color}">${arrow} ${item.change_value || 0}</td>
+                        <td class="text-${color}"><strong>${item.change_percent || 0}%</strong></td>
+                        <td><small>${item.time || '-'}</small></td>
+                    </tr>`;
+                });
+                
+                html += '</tbody></table></div>';
+                body.innerHTML = html;
+            } else {
+                body.innerHTML = '<div class="alert alert-warning">⚠️ هیچ داده‌ای موجود نیست</div>';
+            }
+        } catch (e) {
+            body.innerHTML = `<div class="alert alert-danger">❌ خطا: ${e.message}</div>`;
+        }
+    }
+</script>
+</body>
+</html>

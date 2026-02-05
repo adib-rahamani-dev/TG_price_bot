@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تنظیمات پنل مدیریت</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: #f7f9fc; font-family: 'Segoe UI', sans-serif; }
+        .card { margin-top: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .toggle-section { margin: 20px 0; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #007bff; }
+        .form-switch { font-size: 18px; }
+        .status-badge { font-size: 14px; margin-left: 10px; }
+        .badge-enabled { background-color: #28a745; }
+        .badge-disabled { background-color: #dc3545; }
+        .setting-description { color: #666; font-size: 14px; margin-top: 5px; }
+        .nav-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="nav-header">
+        <h1>⚙️ تنظیمات سیستم</h1>
+        <p>مدیریت تمام ویژگی‌های بات و سرور</p>
+    </div>
+
+    <!-- تنظیمات کانفیگ -->
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">📋 تنظیمات کانفیگ</h5>
+        </div>
+        <div class="card-body">
+            <div class="toggle-section">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6>فعال‌سازی/غیرفعال‌سازی کانفیگ</h6>
+                        <p class="setting-description">کاربران برای دریافت کانفیگ باید بتوانند درخواست ارسال کنند</p>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="configToggle" checked>
+                        <label class="form-check-label" for="configToggle"></label>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <span class="badge badge-enabled status-badge" id="configStatus">فعال</span>
+                </div>
+            </div>
+
+            <div class="toggle-section">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6>فعال‌سازی/غیرفعال‌سازی صفحه وب</h6>
+                        <p class="setting-description">صفحه ثبت کانفیگ و مدیریت آنها</p>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="webPageToggle" checked>
+                        <label class="form-check-label" for="webPageToggle"></label>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <span class="badge badge-enabled status-badge" id="webPageStatus">فعال</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- تنظیمات قیمت‌ها -->
+    <div class="card">
+        <div class="card-header bg-success text-white">
+            <h5 class="mb-0">💰 تنظیمات قیمت‌ها</h5>
+        </div>
+        <div class="card-body">
+            <div class="toggle-section">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6>نمایش قیمت‌های بروز</h6>
+                        <p class="setting-description">نمایش آخرین قیمت‌های دریافتی از API</p>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="pricesToggle" checked>
+                        <label class="form-check-label" for="pricesToggle"></label>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <span class="badge badge-enabled status-badge" id="pricesStatus">فعال</span>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <h6>بازه‌ی تازه‌سازی (ثانیه):</h6>
+                    <input type="number" id="refreshInterval" class="form-control" value="1800" min="60">
+                    <small class="text-muted">حداقل 60 ثانیه</small>
+                </div>
+                <div class="col-md-6">
+                    <h6>تعداد نماد‌های فعال:</h6>
+                    <div class="alert alert-info">
+                        ✓ IR_GOLD_18K<br>
+                        ✓ IR_COIN_EMAMI<br>
+                        ✓ USDT
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- تنظیمات فیدبک -->
+    <div class="card">
+        <div class="card-header bg-warning text-dark">
+            <h5 class="mb-0">💬 تنظیمات فیدبک</h5>
+        </div>
+        <div class="card-body">
+            <div class="toggle-section">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6>فعال‌سازی/غیرفعال‌سازی فیدبک</h6>
+                        <p class="setting-description">کاربران بتوانند فیدبک ارسال کنند</p>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="feedbackToggle" checked>
+                        <label class="form-check-label" for="feedbackToggle"></label>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <span class="badge badge-enabled status-badge" id="feedbackStatus">فعال</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- تنظیمات چک کانال -->
+    <div class="card">
+        <div class="card-header bg-info text-white">
+            <h5 class="mb-0">📢 تنظیمات چک کانال</h5>
+        </div>
+        <div class="card-body">
+            <div class="toggle-section">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6>بررسی عضویت در کانال</h6>
+                        <p class="setting-description">فقط اعضای کانال بتوانند از بات استفاده کنند</p>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="channelCheckToggle" checked>
+                        <label class="form-check-label" for="channelCheckToggle"></label>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <span class="badge badge-enabled status-badge" id="channelCheckStatus">فعال</span>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <label class="form-label">نام کانال:</label>
+                <input type="text" id="channelName" class="form-control" value="@rmanrajaei" placeholder="@channel_name">
+            </div>
+        </div>
+    </div>
+
+    <!-- دکمه‌های عمل -->
+    <div class="card">
+        <div class="card-body">
+            <button id="saveBtn" class="btn btn-primary btn-lg">💾 ذخیره تنظیمات</button>
+            <button id="resetBtn" class="btn btn-outline-secondary btn-lg">🔄 بازنشانی</button>
+            <div id="message" class="mt-3"></div>
+        </div>
+    </div>
+
+    <footer class="text-center text-muted mt-5 mb-5">
+        <small>پنل مدیریت | © 2026</small>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // بارگذاری تنظیمات
+    async function loadSettings() {
+        try {
+            const res = await fetch('/settings');
+            const data = await res.json();
+            
+            document.getElementById('configToggle').checked = data.config_enabled !== false;
+            document.getElementById('webPageToggle').checked = data.web_page_enabled !== false;
+            document.getElementById('pricesToggle').checked = data.prices_enabled !== false;
+            document.getElementById('feedbackToggle').checked = data.feedback_enabled !== false;
+            document.getElementById('channelCheckToggle').checked = data.channel_check_enabled !== false;
+            
+            if (data.refresh_interval) {
+                document.getElementById('refreshInterval').value = data.refresh_interval;
+            }
+            if (data.channel_name) {
+                document.getElementById('channelName').value = data.channel_name;
+            }
+            
+            updateAllStatus();
+        } catch (e) {
+            console.error('خطا در بارگذاری تنظیمات:', e);
+        }
+    }
+
+    // بروزرسانی وضعیت نمایش
+    function updateStatus(elementId, statusId) {
+        const isChecked = document.getElementById(elementId).checked;
+        const statusEl = document.getElementById(statusId);
+        if (isChecked) {
+            statusEl.textContent = '✓ فعال';
+            statusEl.className = 'badge badge-enabled status-badge';
+        } else {
+            statusEl.textContent = '✕ غیرفعال';
+            statusEl.className = 'badge badge-disabled status-badge';
+        }
+    }
+
+    function updateAllStatus() {
+        updateStatus('configToggle', 'configStatus');
+        updateStatus('webPageToggle', 'webPageStatus');
+        updateStatus('pricesToggle', 'pricesStatus');
+        updateStatus('feedbackToggle', 'feedbackStatus');
+        updateStatus('channelCheckToggle', 'channelCheckStatus');
+    }
+
+    // رویدادهای تغییر
+    document.getElementById('configToggle').addEventListener('change', () => updateStatus('configToggle', 'configStatus'));
+    document.getElementById('webPageToggle').addEventListener('change', () => updateStatus('webPageToggle', 'webPageStatus'));
+    document.getElementById('pricesToggle').addEventListener('change', () => updateStatus('pricesToggle', 'pricesStatus'));
+    document.getElementById('feedbackToggle').addEventListener('change', () => updateStatus('feedbackToggle', 'feedbackStatus'));
+    document.getElementById('channelCheckToggle').addEventListener('change', () => updateStatus('channelCheckToggle', 'channelCheckStatus'));
+
+    // ذخیره تنظیمات
+    document.getElementById('saveBtn').addEventListener('click', async () => {
+        const settings = {
+            config_enabled: document.getElementById('configToggle').checked,
+            web_page_enabled: document.getElementById('webPageToggle').checked,
+            prices_enabled: document.getElementById('pricesToggle').checked,
+            feedback_enabled: document.getElementById('feedbackToggle').checked,
+            channel_check_enabled: document.getElementById('channelCheckToggle').checked,
+            refresh_interval: parseInt(document.getElementById('refreshInterval').value),
+            channel_name: document.getElementById('channelName').value
+        };
+
+        try {
+            const res = await fetch('/settings', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(settings)
+            });
+            const data = await res.json();
+            
+            const msgEl = document.getElementById('message');
+            if (data.ok) {
+                msgEl.innerHTML = '<div class="alert alert-success">✅ تنظیمات با موفقیت ذخیره شدند</div>';
+                setTimeout(() => msgEl.innerHTML = '', 3000);
+            } else {
+                msgEl.innerHTML = '<div class="alert alert-danger">❌ خطا: ' + (data.message || 'نامشخص') + '</div>';
+            }
+        } catch (e) {
+            document.getElementById('message').innerHTML = '<div class="alert alert-danger">❌ خطا در ارتباط: ' + e.message + '</div>';
+        }
+    });
+
+    // بازنشانی
+    document.getElementById('resetBtn').addEventListener('click', loadSettings);
+
+    // بارگذاری اولیه
+    loadSettings();
+</script>
+</body>
+</html>

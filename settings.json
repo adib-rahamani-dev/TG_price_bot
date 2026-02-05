@@ -1,14 +1,13 @@
 {
+  "config_enabled": false,
+  "web_page_enabled": true,
+  "prices_enabled": true,
+  "feedback_enabled": true,
+  "channel_check_enabled": true,
+  "refresh_interval": 1800,
+  "channel_name": "@rmanrajaei",
   "admins": [
     "Rman_Rajae",
-    "your_second_admin"
-  ],
-  "auto_update_interval": 1800,
-  "channel_check_enabled": true,
-  "features": {
-    "admin_panel_enabled": true,
-    "config_enabled": false,
-    "feedback_enabled": true,
-    "price_updates_enabled": true
-  }
+    "EP_ADR"
+  ]
 }
